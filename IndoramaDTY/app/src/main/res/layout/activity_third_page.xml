@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdPage"
+    android:orientation="vertical"
+    android:background="@color/bluebox">
+
+    <TextView
+        android:id="@+id/nulls"
+        android:layout_width="300dp"
+        android:layout_height="27dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/purple_700"
+        android:text="formReport"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="43dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="2dp"
+        android:layout_above="@+id/layout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="-5dp"
+        app:srcCompat="@android:drawable/btn_dialog"
+        tools:layout_editor_absoluteX="325dp"
+        tools:layout_editor_absoluteY="-9dp" />
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="90dp"
+        android:layout_height="44dp"
+        android:backgroundTint="@color/purple_200"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="7dp"
+        android:text="SHOW" />
+
+    <ScrollView
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nulls"
+        android:layout_marginTop="57dp"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="horizontal|vertical">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:scrollbars="horizontal|vertical">
+
+            <TableLayout
+                android:layout_width="387dp"
+                android:layout_height="320dp"
+                android:layout_above="@+id/result"
+                android:layout_margin="4dp"
+                android:layout_marginBottom="0dp"
+
+                android:stretchColumns="1,2,34,5,6,7">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="92dp"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:text="DeliveryNo"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:text="Line item"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="92dp"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:text="CartonNo"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="89dp"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:text="PalleteNO"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:text="NetWt"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:text="Gross weight"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:text="PRNWt"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="-7dp"
+        android:layout_toEndOf="@+id/button2"
+        android:backgroundTint="@color/pinkbox"
+        android:shadowColor="#9F4343"
+        android:text="Close"
+        android:textColorHighlight="#CAAFAF"
+        tools:layout_editor_absoluteX="212dp"
+        tools:layout_editor_absoluteY="547dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="-6dp"
+        android:backgroundTint="@color/pinkbox"
+        android:text="Back"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="547dp" />
+
+    <Spinner
+        android:background="@color/teal_200"
+        android:id="@+id/spinner"
+        android:layout_width="210dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/nulls"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/btnView" />
+
+
+</RelativeLayout>

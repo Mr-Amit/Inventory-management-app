@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Indorama DTY</string>
+
+    <string-array name="items">
+        <item>Unscanned Cartons Report</item>
+        <item>Scanned Cartons Report</item>
+    </string-array>
+
+    <string-array name="delino">
+        <item>" "</item>
+    </string-array>
+    <string-array name="palletno">
+        <item> </item>
+    </string-array>
+    <string-array name="scan" >
+        <item >Done</item>
+        <item >Total Cancel</item>
+    </string-array>
+</resources>
